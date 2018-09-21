@@ -82,7 +82,7 @@ class SortedMasterPlan(View):
     def get(self,request):
         response = HttpResponse(content_type='text/csv')
     	#decide the file name
-        response['Content-Disposition'] = 'attachment; filename="sorted_activities.csv"'
+        response['Content-Disposition'] = 'attachment; filename="sorted_masterplan.csv"'
 
         writer = csv.writer(response, csv.excel)
         response.write(u'\ufeff'.encode('utf8'))
